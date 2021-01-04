@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        body{
+            background-color: teal;
+        }
+        h2{
+            text-align: center;
+        }
+        .container{
+            
+            box-shadow: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="container">
+        <h2>Temperature Converter</h2>
+        <h5>We got you covered just type in your value and we convert from &deg;C to 
+            &deg;F and vice versa, it's that easy and simple.
+        </h5>
+        <input type="number" name="" id="celsius" placeholder="celsius"
+        oninput="CtoFConverter(this.value)" onchange="CtoFConverter(this.value)"> &deg;C <br><br>
+
+        <p id="no">Fahrenheit (&deg;F): <span class="fahrenheit"></span></p> <br>
+
+         <!-- from fahrenheit to celsius -->
+
+        <input type="number" name="" id="fahrenheit" placeholder="fahrenheit"
+        oninput="FtoCConverter(this.value)" onchange="FtoCConverter(this.value)"> &deg;F <br><br>
+
+        <p id="to">celsius (&deg;C): <span class="celsius"></span></p>
+        <button class = "center" id="clear">Reset</button>
+    </div>
+    <br>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
